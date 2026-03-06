@@ -19,12 +19,12 @@ public class BookingQueue {
     public void processBookings() {
         while (!bookingQueue.isEmpty()) {
             Reservation current = bookingQueue.poll();
-
             int available = inventory.getAvailability(current.getRoomType());
             if (available > 0) {
                 inventory.updateRoomCount(current.getRoomType(), available - 1);
                 System.out.println("Confirmed for " + current.getGuestName());
-            } else {
+            } 
+            else {
                 System.out.println("Failed for " + current.getGuestName() + " (not available)");
             }
 

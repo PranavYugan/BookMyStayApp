@@ -1,5 +1,7 @@
 package com.seveneleven.BookMyStayApp.inventory;
+
 import java.util.Scanner;
+
 public class RoomSearch {
     private RoomInventory inventory;
 
@@ -20,8 +22,7 @@ public class RoomSearch {
         double price = inventory.getPrice(roomType);
 
         if (availability > 0) {
-            System.out.println(roomType + " is available.");
-            System.out.println("Count: " + availability + ", Price: " + price);
+            System.out.println(roomType + " is available. Count: " + availability + ", Price: " + price);
         } else {
             System.out.println(roomType + " is not available.");
         }

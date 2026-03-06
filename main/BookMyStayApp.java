@@ -14,13 +14,16 @@ public class BookMyStayApp {
         inventory.addRoom("Deluxe", 3, 3000.0);
 
         RoomSearch searchService = new RoomSearch(inventory);
+
+        System.out.println("Current Inventory");
         searchService.displayAvailableRooms();
+
         searchService.searchRoom();
 
         BookingQueue bookingService = new BookingQueue(inventory);
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter number of new reservations to add:");
+        System.out.println("Enter number of reservations to add:");
         int n = sc.nextInt();
         sc.nextLine();
 
@@ -32,13 +35,13 @@ public class BookMyStayApp {
             bookingService.addBookingRequest(new Reservation(guestName, roomType));
         }
 
-        System.out.println("Initial Inventory:");
+        System.out.println("Inventory Before Processing");
         inventory.displayInventory();
 
-        System.out.println("Processing bookings...");
+        System.out.println("Processing Bookings");
         bookingService.processBookings();
 
-        System.out.println("Final Inventory:");
+        System.out.println("Inventory After Processing");
         inventory.displayInventory();
     }
 }
