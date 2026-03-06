@@ -15,7 +15,7 @@ public class RoomSearch {
 
     public void searchRoom() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("\nEnter room type to search: ");
+        System.out.print("Enter room type to search: ");
         String roomType = sc.nextLine();
 
         int availability = inventory.getAvailability(roomType);

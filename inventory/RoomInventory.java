@@ -27,11 +27,11 @@ public class RoomInventory {
     }
 
     public int getAvailability(String type) {
-        return roomCounts.getOrDefault(type.toLowerCase(), 0);
+        return roomCounts.get(type.toLowerCase());
     }
 
     public double getPrice(String type) {
-        return roomPrices.getOrDefault(type.toLowerCase(), 0.0);
+        return roomPrices.get(type.toLowerCase());
     }
 
     public void displayInventory() {

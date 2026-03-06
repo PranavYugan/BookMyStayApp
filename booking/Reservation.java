@@ -29,6 +29,6 @@ public class Reservation {
     @Override
     public String toString() {
         return "Guest=" + guestName + ", RoomType=" + roomType +
-               (roomId != null ? ", RoomID=" + roomId : "") + "]";
+               (roomId != null ? ", RoomID=" + roomId : "") ;
     }
 }
