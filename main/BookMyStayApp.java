@@ -4,6 +4,7 @@ import java.util.Scanner;
 import com.seveneleven.BookMyStayApp.inventory.*;
 import com.seveneleven.BookMyStayApp.booking.*;
 import com.seveneleven.BookMyStayApp.services.*;
+import com.seveneleven.BookMyStayApp.reporting.*;
 
 public class BookMyStayApp {
     public static void main(String[] args) {
@@ -61,6 +62,13 @@ public class BookMyStayApp {
             double total = serviceManager.calculateTotalCost(res, inventory.getPrice(res.getRoomType()));
             System.out.println("Total cost for " + res.getGuestName() + ": " + total);
         }
+        BookingHistory bookingHistory = new BookingHistory();
+        for (Reservation res : bookingService.getConfirmedReservations()) {
+            bookingHistory.addReservation(res);
+        }
+
+        bookingHistory.displayHistory();
+
 
         sc.close();
     }
