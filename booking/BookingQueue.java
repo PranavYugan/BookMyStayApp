@@ -31,7 +31,7 @@ public class BookingQueue {
                 inventory.updateRoomCount(current.getRoomType(), available - 1);
                 confirmedReservations.add(current);
 
-                System.out.println("Confirmed for " + current.getGuestName() + " → Room ID: " + roomId);
+                System.out.println("Confirmed for " + current.getGuestName() + " Room ID: " + roomId);
             } else {
                 System.out.println("Failed for " + current.getGuestName() + " (not available)");
             }
