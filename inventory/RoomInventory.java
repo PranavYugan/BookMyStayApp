@@ -33,9 +33,9 @@ public class RoomInventory {
     }
 
     public void displayInventory() {
-        System.out.println("Current Inventory:");
+        System.out.println("Available rooms:");
         for (String type : roomCounts.keySet()) {
-            System.out.println(type + " - "  + roomPrices.get(type));
+            System.out.println(type + " - " +roomCounts.get(type)+ " - " + roomPrices.get(type));
         }
     }
 }
